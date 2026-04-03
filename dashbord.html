@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Livestock Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Livestock RFID Tracker Dashboard</h1>
+
+        <!-- Registration Form -->
+        <section id="registerSection">
+            <h2>Register New Animal</h2>
+            <form id="registerForm">
+                <label>Tag ID:</label>
+                <input type="text" id="tagId" name="tagId" readonly>
+                <label>Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label>Type:</label>
+                <input type="text" id="animalType" name="animalType" required>
+                <label>Sex:</label>
+                <select id="sex" name="sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <label>Breed:</label>
+                <input type="text" id="breed" name="breed">
+                <label>Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate">
+                <label>Owner Contact:</label>
+                <input type="text" id="ownerContact" name="ownerContact">
+                <button type="submit">Register Animal</button>
+            </form>
+            <button id="scanTagBtn">Scan Tag</button>
+        </section>
+
+        <!-- Animal List -->
+        <section id="listSection">
+            <h2>Registered Animals</h2>
+            <table id="animalsTable">
+                <thead>
+                    <tr>
+                        <th>Tag ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Sex</th>
+                        <th>Breed</th>
+                        <th>Age</th>
+                        <th>Pregnant</th>
+                        <th>Sick</th>
+                        <th>Owner Contact</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
